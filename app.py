@@ -3,7 +3,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-#Initialize the flask App
+#Initializing the flask App
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
 
@@ -12,8 +12,9 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
-#To use the predict button in our web-app
+#To use the predict button in web-app
 @app.route('/predict',methods=['POST'])
+# Creating a Method using Post 
 def predict():
     '''
     For rendering results on HTML GUI
