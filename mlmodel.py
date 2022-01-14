@@ -10,13 +10,14 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import pickle
 
-df = pd.read_csv("FuelConsumption.csv")
+df = pd.read_csv("Profit.csv")
+
 
 # take a look at the dataset
 #df.head()
 
 #use required features
-cdf = df[['ENGINESIZE','CYLINDERS','FUELCONSUMPTION_COMB','CO2EMISSIONS']]
+cdf = df[['R&DSpend','Administration','MarketingSpend','State','Profit']]
 
 #Training Data and Predictor Variable
 # Use all data for training (tarin-test-split not used)
